@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>فاکتور طلا – پور گلد (قفل‌دار)</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--page:#e9dfc4;--ink:#2a2108;--brown:#6f5116;--panel:#9d7c36;--gold:#c8961f;--bar:#fff8e4;--barink:#3a2a08;
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--page:#17130a;--bar:#2a2210;--barink:#f3e3b0}}
+:root[data-theme="dark"]{--page:#17130a;--bar:#2a2210;--barink:#f3e3b0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;padding:10px;background:var(--page);font-family:'Vazirmatn',Tahoma,sans-serif;color:var(--ink)}
+.bar{max-width:700px;margin:0 auto 8px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;background:var(--bar);color:var(--barink);padding:5px 10px;border-radius:8px;font-size:12px}
+.bar button,.bar select{font:inherit;border:1px solid #b8892b;background:#fff;color:#2a2108;border-radius:7px;padding:4px 10px;cursor:pointer}
+.bar button.main{background:var(--brown);color:#f7e6b0;border-color:var(--brown);font-weight:700}
+.bar .sp{flex:1}
+.bar button.tiny{font-size:11px;padding:2px 8px;border-radius:6px}.smsg{font-size:11px;font-weight:700;color:#2e7d32}
+.hist{max-width:700px;margin:10px auto 0;background:var(--bar);color:var(--barink);border-radius:8px;padding:8px 10px;font-size:12px}
+.hist .hh{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-bottom:6px}.hist .hh input[type=text]{flex:1 1 150px;min-width:0;font:inherit;border:1px solid #b8892b;border-radius:6px;padding:3px 6px;background:#fff;color:#2a2108}
+.hist button,.hist label.imp{font:inherit;font-size:11px;border:1px solid #b8892b;background:#fff;color:#2a2108;border-radius:6px;padding:2px 8px;cursor:pointer}
+.ht{width:100%;table-layout:fixed;border-collapse:collapse}.ht th{font-size:11px;opacity:.85;border-bottom:1px solid rgba(184,137,43,.6)}
+.ht th,.ht td{padding:4px 3px;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ht td{border-bottom:1px solid rgba(184,137,43,.3)}.ht td button{margin:0 1px;padding:1px 5px}
+#hnone{text-align:center;opacity:.7;padding:6px}
+#bk[hidden]{display:none}#bk{margin:4px 0 8px}#bk textarea{width:100%;font:11px monospace;direction:ltr;border:1px solid #b8892b;border-radius:6px;padding:4px;background:#fff;color:#2a2108;resize:vertical}
+.bkb{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:4px}#bkmsg{font-size:11px;font-weight:700}
+.hfoot{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px;padding-top:6px;border-top:1px solid rgba(184,137,43,.4);font-size:10.5px;opacity:.9}.hist button.mini{font-size:10.5px;padding:1px 7px}
+.phelp{max-width:700px;margin:0 auto 8px;background:#fff3cd;color:#5a4300;border:1px solid #e0b84a;border-radius:8px;padding:6px 10px;font-size:11.5px;line-height:1.8}.phelp[hidden]{display:none}.phelp button{font:inherit;font-size:11px;margin-right:8px;border:1px solid #b8892b;background:#fff;border-radius:6px;padding:1px 8px;cursor:pointer}
+.sheet{position:relative;overflow:hidden;max-width:700px;margin:0 auto;border-radius:10px;padding:22px 6% 20px;
+ background:radial-gradient(circle at 28% 12%,#fdf4d2 0,#ecd698 45%,#d2b162 100%);box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.gem{position:absolute;width:54px;height:54px;background:linear-gradient(135deg,#fff,#cfd6dc 50%,#8f9aa4);
+ clip-path:polygon(30% 0,70% 0,100% 30%,100% 70%,70% 100%,30% 100%,0 70%,0 30%)}
+.orn{position:absolute;top:44%;width:120px;height:120px;border-radius:50%;
+ background:radial-gradient(circle,#7d1020 0 14%,#f3d77a 15% 22%,#b8892b 23% 30%,transparent 31%),repeating-conic-gradient(#d9a93a 0 14deg,#8a5f12 14deg 18deg,transparent 18deg 45deg);
+ -webkit-mask:radial-gradient(circle,#000 0 68%,transparent 70%);mask:radial-gradient(circle,#000 0 68%,transparent 70%)}
+.head{position:relative;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.brand{text-align:center;flex:1 1 200px;min-width:0}
+.brand .t1{font-size:22px;font-weight:700;color:#111}
+.brand .t2{font-size:clamp(38px,8vw,56px);font-weight:900;line-height:1.1;color:var(--gold);text-shadow:1px 1px 0 #fff3b8,-1px -1px 0 #7a5612,2px 3px 4px rgba(90,60,5,.4)}
+.brand .t3{font-size:11px;letter-spacing:5px;color:#5b6d8a;direction:ltr;font-style:italic}
+.info{flex:1 1 220px;max-width:250px;min-width:0;background:rgba(255,255,255,.6);border:1px solid #b8892b;border-radius:10px;padding:8px 12px;font-size:12px}
+.info label{display:flex;align-items:center;gap:6px;margin:3px 0;color:#6b4a0c;font-weight:700;white-space:nowrap}
+.info input{flex:1;min-width:0;border:0;border-bottom:1px dotted #3a2a08;background:transparent;font:inherit;color:var(--ink);text-align:center;padding:2px}
+.buyer{position:relative;display:flex;gap:10px;align-items:flex-end;margin:16px 0 14px;font-weight:700;font-size:14px;flex-wrap:wrap}
+.buyer label{display:flex;align-items:flex-end;gap:6px;flex:1 1 240px}
+.buyer input{flex:1;min-width:0;border:0;border-bottom:1px dotted #3a2a08;background:transparent;font:inherit;color:var(--ink);text-align:center;padding:2px}
+.panel{position:relative;background:var(--panel);border-radius:14px;padding:8px;box-shadow:0 3px 8px rgba(60,40,0,.4)}
+table{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:3px;text-align:center}
+th{background:var(--brown);color:#f7e6b0;font-size:12px;padding:6px 2px;border-radius:5px}
+td{background:#fff;border-radius:4px;padding:0}
+td.no{background:var(--brown);color:#fff;font-size:12px;font-weight:700}
+.f{width:100%;border:0;background:transparent;font:inherit;font-size:13px;font-weight:700;text-align:center;color:#2a2108;padding:8px 3px;outline:none;border-radius:4px}
+.f:focus{background:#fff6d0;box-shadow:inset 0 0 0 2px var(--brown)}
+.tot td{padding:7px 8px;font-size:12px;font-weight:700;color:#2a2108}
+.tot td.tag{background:var(--brown);color:#f7e6b0}
+.tot td.amt{font-size:16px}
+.note{text-align:center;font-size:11px;line-height:1.9;color:#2a1c02;margin-top:8px}
+.sig{display:flex;justify-content:space-between;padding:18px 4% 0;font-weight:700;font-size:14px}
+.add{display:block;margin:8px auto 0;font:inherit;font-size:12px;border:1px dashed #f7e6b0;background:transparent;color:#f7e6b0;border-radius:8px;padding:4px 14px;cursor:pointer}
+.calc{max-width:700px;margin:0 auto 8px;background:var(--bar);color:var(--barink);padding:7px 10px;border-radius:8px;font-size:12px;display:flex;flex-wrap:wrap;gap:5px 10px;align-items:center}
+.calc label{display:flex;align-items:center;gap:5px;white-space:nowrap}
+.calc input{width:56px;font:inherit;text-align:center;border:1px solid #b8892b;border-radius:5px;padding:3px;background:#fff;color:#2a2108}
+.calc #wages input{width:62px}
+.calc .h{flex-basis:100%;font-weight:700}
+.calc .h small{font-weight:400;opacity:.85;margin-right:8px}
+.calc #wages,.calc #brk,.calc #wnotes{flex-basis:100%;display:flex;flex-wrap:wrap;gap:3px 10px;font-size:11.5px}
+td.ay{font-size:14px;font-weight:700;color:#2a2108}
+td.dl,th.dl{background:transparent}
+.del{width:24px;height:24px;border-radius:50%;border:0;background:rgba(111,81,22,.3);color:#f7e6b0;font-size:16px;line-height:1;cursor:pointer;padding:0}
+.calc .pw{display:flex;flex-direction:column;gap:4px;align-items:flex-start}.calc .cap{font-size:11px;opacity:.85;min-height:14px;margin-top:-2px}
+.c9{width:30px}
+.calc .fin{flex-basis:100%;display:none;align-items:baseline;flex-wrap:wrap;gap:4px 8px;border-top:1px solid rgba(184,137,43,.55);padding-top:5px;margin-top:2px;font-weight:700}
+.calc .fin b{font-size:18px;font-weight:900}.calc .fin small{font-weight:400;opacity:.85;font-size:11px}
+.c0{width:34px}.c1{width:38%}.c2{width:12%}.c3{width:15%}
+@media screen and (max-width:640px){.gem,.orn{display:none}th{font-size:10.5px;padding:6px 1px}.f{font-size:11.5px;padding:8px 1px}.sheet{padding:16px 3%}.panel{padding:6px 4px}.c0{width:22px}.c1{width:27%}.c2{width:11%}.c3{width:14%}.c9{width:22px}.del{width:20px;height:20px;font-size:14px}td.no{font-size:10px}
+ .tot,.tot tbody{display:block}.tot tr{display:flex;flex-wrap:wrap;gap:3px}.tot td{width:auto!important;flex:1 1 auto}.tot td:nth-child(1),.tot td:nth-child(2){flex-basis:100%}.tot td.tag{flex:0 0 60px}.tot td.amt{flex:1}}
+@media print{
+ @page{size:A5 landscape;margin:0}
+ body{background:#fff;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .bar,.add,.calc,.dl,.c9,.hist,.phelp{display:none}.sheet{max-width:none;border-radius:0;box-shadow:none;zoom:var(--pz,.85);min-height:calc((var(--ph,148mm) - 1mm)/var(--pz,.85));display:flex;flex-direction:column}.sig{margin-top:auto}
+ .f:focus{background:transparent;box-shadow:none}
+}
+#lock{position:fixed;inset:0;z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:env(safe-area-inset-top,0px) 16px env(safe-area-inset-bottom,0px);background:radial-gradient(circle at 30% 15%,#fdf4d2,#ecd698 45%,#cfae62);color:#2a2108;text-align:center}
+#lock .nm{font-size:44px;font-weight:900;color:#c8961f;text-shadow:1px 1px 0 #fff3b8,-1px -1px 0 #7a5612}
+#lock h2{margin:0;font-size:18px}
+.dots{display:flex;gap:14px;direction:ltr;padding:6px}.dots i{width:16px;height:16px;border-radius:50%;border:2px solid #6f5116}.dots i.on{background:#6f5116}
+.pad{display:grid;grid-template-columns:repeat(3,68px);gap:12px;direction:ltr}
+.pad button{height:68px;border-radius:50%;border:1px solid #b8892b;background:rgba(255,255,255,.7);font:inherit;font-size:24px;font-weight:700;color:#2a2108;cursor:pointer;padding:0}
+.pad button:active{background:#fff}.pad .e{visibility:hidden}
+#lockmsg{min-height:20px;color:#8a1020;font-size:13px;font-weight:700}
+.shake{animation:sh .35s}@keyframes sh{20%{transform:translateX(-10px)}40%{transform:translateX(10px)}60%{transform:translateX(-6px)}80%{transform:translateX(6px)}}
+body.locked .bar,body.locked .calc,body.locked .sheet{display:none}
+@media print{#lock{display:none}}
+</style>
+</head>
+<body>
+<div id="lock"><div class="nm">پور گلد</div><h2>رمز را وارد کنید</h2><div class="dots"><i></i><i></i><i></i><i></i></div><div id="lockmsg"></div><div class="pad"><button data-d="1">۱</button><button data-d="2">۲</button><button data-d="3">۳</button><button data-d="4">۴</button><button data-d="5">۵</button><button data-d="6">۶</button><button data-d="7">۷</button><button data-d="8">۸</button><button data-d="9">۹</button><button class="e"></button><button data-d="0">۰</button><button data-x="1">⌫</button></div></div>
+<div class="bar">
+ <label>واحد پول: <select id="unit"><option>تومان</option><option>ریال</option></select></label>
+ <label>اندازه چاپ: <select id="psize"><option value="a5l" selected>A5 افقی ۲۱×۱۴٫۸</option><option value="a5p">A5 عمودی</option><option value="a4p">A4 عمودی ۲۱×۲۹٫۷</option><option value="a4l">A4 افقی</option><option value="a6l">A6 افقی ۱۴٫۸×۱۰٫۵</option><option value="a6p">A6 عمودی</option><option value="b5l">B5 افقی ۲۵×۱۷٫۶</option><option value="b5p">B5 عمودی</option><option value="custom">اندازه دلخواه…</option></select></label>
+ <span id="pcust" style="display:none"><input id="pw" value="210" inputmode="numeric" style="width:40px;font:inherit;text-align:center"> × <input id="ph" value="148" inputmode="numeric" style="width:40px;font:inherit;text-align:center"> میلی‌متر</span>
+ <button id="savebtn" class="tiny" title="ذخیره فاکتور">💾 ذخیره</button><span id="savemsg" class="smsg"></span>
+ <span class="sp"></span>
+ <button id="clear">فاکتور جدید</button>
+ <button id="lockbtn">🔒 قفل</button>
+ <button id="print" class="main">چاپ / ذخیره PDF</button>
+</div>
+
+<div class="phelp" id="phelp" hidden>چاپ مستقیم در این نما (قاب داخلی) توسط مرورگر بسته شده است. صفحه را <b>در یک تب مرورگر</b> باز کن (لینک صفحه را در Chrome یا Safari باز کن) و دوباره «چاپ / ذخیره PDF» را بزن، یا از منوی مرورگر گزینه‌ی <b>Print</b> را بزن. <button type="button" id="phelpx">بستن</button></div>
+<div class="calc">
+ <div class="h">محاسبه‌ی خودکار قیمت <button type="button" id="goldRefresh" style="font:inherit;font-size:11px;margin-right:8px;border:1px solid #b8892b;border-radius:6px;padding:2px 8px;background:#fff;cursor:pointer">دریافت قیمت آنلاین</button><span id="goldStatus" style="font-size:10.5px;font-weight:400;margin-right:6px">قیمت آنلاین هنوز دریافت نشده</span></div>
+ <div class="pw"><label><span>قیمت هر گرم طلا (<span class="u">تومان</span>)</span> <input id="gram2" inputmode="numeric" data-money style="width:112px"></label><div id="gramw" class="cap"></div><label><span>وزن ردیف اول (گرم)</span> <input id="w1" inputmode="decimal" data-pd style="width:88px"></label></div>
+ <label>اجرت ساخت (٪ از ارزش طلا) <input id="wage" inputmode="decimal" data-pd placeholder="۰"></label>
+ <label>سود فروشنده (٪ از طلا + اجرت) <input id="profit" inputmode="decimal" data-pd value="۷"></label>
+ <label>مالیات (٪ از طلا + اجرت + سود) <input id="tax" inputmode="decimal" data-pd value="۲"></label>
+ <div id="wages"></div>
+ <div id="wnotes"></div>
+ <div id="brk"></div>
+ <div id="fin" class="fin"></div>
+</div>
+
+<div class="sheet" id="sheet">
+ <i class="gem" style="top:8px;left:8px;transform:rotate(-18deg);width:62px;height:62px"></i>
+ <i class="gem" style="top:150px;right:10px;width:30px;height:30px"></i>
+ <i class="gem" style="bottom:12px;right:-8px;width:80px;height:80px;transform:rotate(10deg)"></i>
+ <i class="orn" style="left:-62px"></i><i class="orn" style="right:-62px"></i>
+
+ <div class="head">
+  <div class="brand"><div class="t1">طلا و جواهر</div><div class="t2">پور گلد</div><div class="t3">POUR GOLD JEWELLERY</div></div>
+  <div class="info">
+   <label>شماره فاکتور: <input id="no" inputmode="numeric" data-pd></label>
+   <label>تاریخ: <input id="date" data-pd></label>
+   <label><span>قیمت هر گرم طلا (<span class="u">تومان</span>):<small style="display:block;color:#16803c;font-size:9px;font-weight:700;line-height:1.5">قیمت رسمی</small></span> <input id="gram" inputmode="numeric" data-money></label>
+  </div>
+ </div>
+
+ <div class="buyer">
+  <label>خریدار: خانم / آقا <input id="buyer"></label>
+  <label>شماره تماس: <input id="phone" inputmode="tel" data-pd></label>
+ </div>
+
+ <div class="panel">
+  <table>
+   <colgroup><col class="c0"><col class="c1"><col class="c2"><col class="c3"><col><col class="c9"></colgroup>
+   <thead><tr><th></th><th>نوع جنس</th><th>عیار</th><th>وزن (گرم)</th><th>قیمت کل (<span class="u">تومان</span>)</th><th class="dl"></th></tr></thead>
+   <tbody id="rows"></tbody>
+  </table>
+  <button class="add" id="add">+ افزودن ردیف</button>
+  <table class="tot" style="margin-top:4px"><tr>
+   <td style="width:118px">جمع کل به حروف:</td><td id="words"></td>
+   <td class="tag" style="width:64px">جمع کل</td><td class="amt" id="sum" style="width:23%"></td>
+  </tr></table>
+  <div class="note"><b>مشتری گرامی:</b><br>همراه داشتن فاکتور در هنگام تعویض و یا فروش الزامی است.<br>جنس فروخته شده در هنگام تعویض و یا فروش، اجرت آن کسر و طلا به نرخ روز خریداری می‌گردد.</div>
+ </div>
+ <div class="sig"><span>امضاء خریدار</span><span>مهر و امضاء فروشنده</span></div>
+</div>
+
+<section class="hist" id="hist"><div class="hh"><b>فاکتورهای ذخیره‌شده (<span id="hcount">۰</span>)</b>
+ <input type="text" id="hq" placeholder="جستجو: شماره، خریدار یا تلفن">
+ <button type="button" id="hexp">💾 پشتیبان / بازیابی</button></div>
+ <div id="bk" hidden><textarea id="bkt" rows="3" spellcheck="false" placeholder="متن پشتیبان اینجاست. برای بازیابی، متن پشتیبان قبلی را اینجا بچسبان و «بازیابی از متن» را بزن."></textarea>
+  <div class="bkb"><button type="button" id="bkcopy">کپی متن</button><button type="button" id="bkdl">دانلود فایل</button><button type="button" id="bkrest">بازیابی از متن</button><label class="imp">بازیابی از فایل<input type="file" id="himp" accept=".json,application/json" hidden></label><span id="bkmsg"></span></div></div>
+ <table class="ht"><colgroup><col style="width:13%"><col style="width:19%"><col style="width:19%"><col style="width:21%"><col></colgroup>
+ <thead><tr><th>شماره</th><th>تاریخ</th><th>خریدار</th><th>مبلغ</th><th></th></tr></thead><tbody id="hbody"></tbody></table>
+ <div id="hnone">هنوز فاکتوری ذخیره نشده است.</div>
+ <div class="hfoot"><button type="button" id="hren" class="mini">🔄 شماره‌گذاری مجدد از ۱</button><span>شماره‌ی فاکتورهای ذخیره‌شده را پشت‌سرهم از ۱ مرتب می‌کند.</span></div></section>
+
+<script>
+const D='۰۱۲۳۴۵۶۷۸۹';
+const pd=s=>String(s).replace(/[0-9]/g,d=>D[d]);
+function liveFmt(t){
+ const isD=c=>/[0-9۰-۹٠-٩]/.test(c),norm=x=>String(x).replace(/[۰-۹]/g,d=>D.indexOf(d)).replace(/[٠-٩]/g,d=>d.charCodeAt(0)-1632);
+ const pos=t.selectionStart==null?t.value.length:t.selectionStart,nb=[...t.value.slice(0,pos)].filter(isD).length;
+ const ds=norm(t.value).replace(/\D/g,'').replace(/^0+(?=\d)/,'').slice(0,13),f=ds?pd(Number(ds).toLocaleString('en-US')):'';
+ if(f===t.value)return;t.value=f;let c=0,p=0;for(;p<f.length&&c<nb;p++)if(isD(f[p]))c++;
+ try{t.setSelectionRange(p,p)}catch(e){}
+}
+const wnum=s=>{const t=String(s).replace(/[۰-۹]/g,d=>D.indexOf(d)).replace(/[٠-٩]/g,d=>d.charCodeAt(0)-1632).replace(/\s/g,'');const a=t.split(/[.,،٫٬\/]/);const fr=a.length>1?a.pop():'';const wh=a.join('')||'0';return Math.round(parseFloat(wh+'.'+(fr||'0'))*1000)||0};
+const num=s=>parseFloat(String(s).replace(/[۰-۹]/g,d=>D.indexOf(d)).replace(/[٠-٩]/g,d=>d.charCodeAt(0)-1632).replace(/٫/g,'.').replace(/[٬،,\s]/g,''))||0;
+const money=s=>{const n=num(String(s).replace(/[.\/]/g,''));return n?pd(Math.round(n).toLocaleString('en-US')):''};
+const ONES=['','یک','دو','سه','چهار','پنج','شش','هفت','هشت','نه','ده','یازده','دوازده','سیزده','چهارده','پانزده','شانزده','هفده','هجده','نوزده'];
+const TENS=['','','بیست','سی','چهل','پنجاه','شصت','هفتاد','هشتاد','نود'];
+const HUND=['','صد','دویست','سیصد','چهارصد','پانصد','ششصد','هفتصد','هشتصد','نهصد'];
+const GRP=['','هزار','میلیون','میلیارد','هزار میلیارد'];
+function three(n){const p=[];if(n>=100){p.push(HUND[Math.floor(n/100)]);n%=100}
+ if(n>=20){p.push(TENS[Math.floor(n/10)]);n%=10;if(n)p.push(ONES[n])}else if(n)p.push(ONES[n]);return p.join(' و ')}
+function words(n){n=Math.round(n);if(!n)return '';const o=[];let i=0;
+ while(n>0){const r=n%1000;n=Math.floor(n/1000);if(r)o.push(three(r)+(GRP[i]?' '+GRP[i]:''));i++}return o.reverse().join(' و ')}
+
+const $=id=>document.getElementById(id), rows=$('rows'), wages=$('wages');
+function addRow(){
+ const i=rows.children.length+1, tr=document.createElement('tr');
+ tr.innerHTML=`<td class="no">${pd(i)}</td><td><input class="f" data-k="t"></td><td class="ay">۱۸</td>`+
+ `<td><input class="f" data-k="w" inputmode="decimal" data-pd></td><td><input class="f" data-k="p" inputmode="numeric" data-money></td><td class="dl"><button type="button" class="del" title="حذف ردیف">×</button></td>`;
+ rows.appendChild(tr);
+ wages.insertAdjacentHTML('beforeend',`<label><span>اجرت ردیف ${pd(i)}</span> <input inputmode="decimal" data-pd placeholder="پیش‌فرض"></label>`);
+}
+for(let i=0;i<2;i++)addRow();
+
+function calc(){
+ const ae=document.activeElement;
+ if(ae===$('gram2'))$('gram').value=$('gram2').value;else if(ae===$('gram'))$('gram2').value=$('gram').value;
+ const fw=rows.children[0]&&rows.children[0].querySelector('[data-k=w]'),w1=$('w1');if(fw){if(ae===w1)fw.value=w1.value;else w1.value=fw.value}
+ const g=num($('gram').value.replace(/[.\/]/g,''));let sum=0;
+ const dw=num($('wage').value),pp=num($('profit').value),tp=num($('tax').value);
+ const B={gold:0,wage:0,profit:0,tax:0},notes=[];
+ [...rows.children].forEach((tr,i)=>{
+  const ws=wnum(tr.querySelector('[data-k=w]').value),p=tr.querySelector('[data-k=p]'),nm=tr.querySelector('[data-k=t]').value;
+  tr.querySelector('.ay').textContent='۱۸';
+  if(ws){notes.push(`<span>ردیف ${pd(i+1)}: <b>${pd(Math.floor(ws/1000))} گرم${ws%1000?' و '+pd(ws%1000)+' سوت':''}</b>${ws>1000000?' ⚠️ بیش از ۱۰۰۰ گرم؛ وزن را بررسی کن':''}</span>`)}
+  if(!tr.dataset.m){
+   if(g&&ws){
+    const wi=wages.children[i]?wages.children[i].querySelector('input').value:'';
+    const wp=wi?num(wi):dw,gold=Math.round(g*ws/1000),wg=Math.round(gold*wp/100),pr=Math.round((gold+wg)*pp/100),tx=Math.round((gold+wg+pr)*tp/100);
+    B.gold+=gold;B.wage+=wg;B.profit+=pr;B.tax+=tx;p.value=money(gold+wg+pr+tx);
+   }else p.value='';
+  }
+  sum+=num(p.value.replace(/[.\/]/g,''));
+ });
+ $('wnotes').innerHTML='<span style="opacity:.8">وزن: ۲٫۲۰۰ یعنی ۲ گرم و ۲۰۰ سوت</span>'+notes.join('');
+ $('brk').innerHTML=B.gold?`<span>ارزش طلا: <b>${money(B.gold)}</b></span><span>اجرت: <b>${money(B.wage)||'۰'}</b></span><span>سود فروشنده: <b>${money(B.profit)||'۰'}</b></span><span>مالیات: <b>${money(B.tax)||'۰'}</b></span>`:'';
+ const u=$('unit').value;
+ $('gramw').textContent=g?words(g)+' '+u:'';
+ $('fin').innerHTML=sum?`مبلغ نهایی: <b>${money(sum)}</b> ${u} <small>${words(sum)} ${u}</small>`:'';$('fin').style.display=sum?'flex':'none';
+ $('sum').textContent=sum?money(sum):'';
+ $('words').textContent=sum?words(sum)+' '+u:'';
+ document.querySelectorAll('.u').forEach(e=>e.textContent=u);
+}
+document.addEventListener('input',e=>{
+ const t=e.target;if(!t.matches('input'))return;
+ if(t.hasAttribute('data-pd')||t.hasAttribute('data-money')){let v=pd(t.value);if(t.getAttribute('inputmode')==='decimal')v=v.replace(/\./g,'٫');if(v!==t.value)t.value=v}
+ if(t.hasAttribute('data-money'))liveFmt(t);
+ if(t.dataset.k==='p'){const tr=t.closest('tr');t.value?tr.dataset.m=1:delete tr.dataset.m}
+ calc();
+});
+document.addEventListener('focusout',e=>{
+ const t=e.target;if(t.matches&&t.matches('[data-money]')){t.value=money(t.value)||t.value;calc()}
+});
+document.addEventListener('focusout',e=>{if(e.target.id==='gram'||e.target.id==='gram2'){$('gram').value=$('gram2').value=e.target.value}});
+function renum(){[...rows.children].forEach((tr,i)=>{tr.querySelector('.no').textContent=pd(i+1)});[...wages.children].forEach((l,i)=>{l.querySelector('span').textContent='اجرت ردیف '+pd(i+1)})}
+rows.addEventListener('click',e=>{const b=e.target.closest('.del');if(!b)return;const tr=b.closest('tr'),i=[...rows.children].indexOf(tr);
+ if(rows.children.length===1){tr.querySelectorAll('input').forEach(x=>{x.value=''});delete tr.dataset.m;wages.children[0].querySelector('input').value=''}
+ else{tr.remove();wages.children[i].remove();renum()}
+ calc()});
+const SZ={a4p:[210,297],a4l:[297,210],a5l:[210,148],a5p:[148,210],a6l:[148,105],a6p:[105,148],b5l:[250,176],b5p:[176,250]};
+function zoomFor(W,H){return +(0.92*Math.min(H/141,W/170,1.3))}
+function setPS(){const k=$('psize').value;let W,H;if(k==='custom'){W=Math.min(500,Math.max(60,Number(pd2($('pw').value))||210));H=Math.min(700,Math.max(60,Number(pd2($('ph').value))||148))}else[W,H]=SZ[k];
+ $('pcust').style.display=k==='custom'?'inline':'none';const r=document.documentElement.style;r.setProperty('--ph',H+'mm');r.setProperty('--pz',zoomFor(W,H).toFixed(3));
+ let st=document.getElementById('pgstyle');if(!st){st=document.createElement('style');st.id='pgstyle';document.head.appendChild(st)}st.textContent='@page{size:'+W+'mm '+H+'mm;margin:0}'}
+const pd2=x=>String(x).replace(/[۰-۹]/g,d=>D.indexOf(d));
+$('psize').onchange=setPS;['pw','ph'].forEach(id=>$(id).addEventListener('input',setPS));setPS();
+const KI='pg_invoices',KC='pg_counter';let currentId=null,msgT;
+const readAll=()=>{try{const a=JSON.parse(localStorage.getItem(KI)||'[]');return Array.isArray(a)?a:[]}catch(e){return []}};
+const readC=()=>{try{return Number(localStorage.getItem(KC))||0}catch(e){return 0}};
+function writeAll(list,c){try{localStorage.setItem(KI,JSON.stringify(list));localStorage.setItem(KC,String(c));return true}catch(e){return false}}
+const maxNo=l=>l.reduce((m,x)=>Math.max(m,Number(x.no)||0),0);
+const nextNo=()=>Math.max(readC(),maxNo(readAll()))+1;
+function msg(t,bad){const m=$('savemsg');m.textContent=t;m.style.color=bad?'#b3261e':'#2e7d32';clearTimeout(msgT);msgT=setTimeout(()=>{m.textContent=''},3500)}
+const todayFa=()=>{try{return new Intl.DateTimeFormat('fa-IR-u-ca-persian-nu-arabext',{year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date())}catch(e){return ''}};
+function setNo(){const n=$('no');n.readOnly=true;n.value=pd(nextNo())}
+function snap(){return{buyer:$('buyer').value,phone:$('phone').value,date:$('date').value,gram:$('gram').value,wage:$('wage').value,profit:$('profit').value,tax:$('tax').value,unit:$('unit').value,
+ total:$('sum').textContent,at:Date.now(),
+ rows:[...rows.children].map((tr,i)=>({t:tr.querySelector('[data-k=t]').value,w:tr.querySelector('[data-k=w]').value,p:tr.querySelector('[data-k=p]').value,m:!!tr.dataset.m,wi:wages.children[i]?wages.children[i].querySelector('input').value:''}))}}
+function saveInv(){
+ calc();const r=snap();
+ if(!r.buyer&&!r.rows.some(x=>x.t||x.w||x.p)){msg('فاکتور خالی است؛ چیزی ذخیره نشد.',1);return}
+ const list=readAll();let c=Math.max(readC(),maxNo(list)),upd=false;
+ const k=currentId==null?-1:list.findIndex(x=>x.no===currentId);
+ if(k>=0){r.no=currentId;list[k]=r;upd=true}else{r.no=c+1;c=r.no;list.push(r)}
+ if(!writeAll(list,c)){msg('ذخیره‌سازی در این مرورگر ممکن نیست.',1);return}
+ currentId=r.no;$('no').value=pd(r.no);renderHist();msg((upd?'به‌روزرسانی شد ✓ ':'ذخیره شد ✓ ')+'فاکتور شماره '+pd(r.no));
+}
+function loadInv(r){
+ $('unit').value=r.unit||'تومان';
+ ['buyer','phone','date','gram'].forEach(k=>{$(k).value=r[k]||''});$('gram2').value=r.gram||'';
+ $('wage').value=r.wage||'';$('profit').value=r.profit||'';$('tax').value=r.tax||'';
+ rows.innerHTML='';wages.innerHTML='';
+ const rs=r.rows&&r.rows.length?r.rows:[{}];rs.forEach(()=>addRow());
+ [...rows.children].forEach((tr,i)=>{const x=rs[i]||{};tr.querySelector('[data-k=t]').value=x.t||'';tr.querySelector('[data-k=w]').value=x.w||'';
+  tr.querySelector('[data-k=p]').value=x.p||'';if(x.m)tr.dataset.m=1;else delete tr.dataset.m;
+  if(wages.children[i])wages.children[i].querySelector('input').value=x.wi||''});
+ currentId=r.no;$('no').value=pd(r.no);
+ if(typeof liveOn!=='undefined'){liveOn=false;applyLive()}
+ calc();window.scrollTo({top:0,behavior:'smooth'});msg('فاکتور شماره '+pd(r.no)+' باز شد.');
+}
+function renderHist(){
+ const all=readAll(),q=pd($('hq').value.trim());$('hcount').textContent=pd(all.length);
+ const list=all.sort((a,b)=>b.no-a.no).filter(r=>!q||(pd(r.no)+' '+(r.buyer||'')+' '+pd(r.phone||'')+' '+(r.date||'')).includes(q)).slice(0,300);
+ const tb=$('hbody');tb.innerHTML='';
+ list.forEach(r=>{const tr=document.createElement('tr');
+  [pd(r.no),r.date||'',r.buyer||'—',(r.total||'—')].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.appendChild(td)});
+  const td=document.createElement('td');
+  [['باز','open'],['حذف','del']].forEach(([t,a])=>{const b=document.createElement('button');b.type='button';b.textContent=t;b.dataset.a=a;b.dataset.no=r.no;td.appendChild(b)});
+  tr.appendChild(td);tb.appendChild(tr)});
+ $('hnone').style.display=list.length?'none':'block';$('hnone').textContent=all.length?'موردی پیدا نشد.':'هنوز فاکتوری ذخیره نشده است.';
+}
+function armDel(b){if(b.dataset.arm==='1')return true;b.dataset.arm='1';b.textContent='مطمئنی؟';b.style.background='#ffd6d1';setTimeout(()=>{if(b.isConnected){b.dataset.arm='';b.textContent='حذف';b.style.background=''}},3500);return false}
+$('hbody').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const no=Number(b.dataset.no),list=readAll(),r=list.find(x=>x.no===no);if(!r)return;
+ if(b.dataset.a==='open')loadInv(r);
+ else if(b.dataset.a==='del'&&armDel(b)){const rest=list.filter(x=>x.no!==no);writeAll(rest,Math.max(readC(),maxNo(list)));if(currentId===no)currentId=null;renderHist();msg('فاکتور شماره '+pd(no)+' حذف شد.')}});
+$('hq').addEventListener('input',renderHist);
+$('savebtn').onclick=saveInv;
+$('clear').addEventListener('click',()=>setTimeout(()=>{currentId=null;setNo();$('date').value=todayFa();$('gram2').value='';if(typeof liveOn!=='undefined'){liveOn=true;applyLive()}calc()},0));
+const bkData=()=>JSON.stringify({counter:Math.max(readC(),maxNo(readAll())),invoices:readAll()});
+const bkm=(t,bad)=>{const m=$('bkmsg');m.textContent=t;m.style.color=bad?'#b3261e':'#2e7d32'};
+function refreshNo(){if(currentId==null)setNo();else $('no').value=pd(currentId)}
+function mergeImport(d){const inc=Array.isArray(d.invoices)?d.invoices:[],list=readAll(),have=new Set(list.map(x=>x.no));let n=0;
+ inc.forEach(x=>{if(x&&Number.isFinite(Number(x.no))&&!have.has(Number(x.no))){x.no=Number(x.no);list.push(x);have.add(x.no);n++}});
+ if(!writeAll(list,Math.max(readC(),Number(d.counter)||0,maxNo(list))))throw new Error('storage');renderHist();refreshNo();return n}
+$('hexp').onclick=()=>{const bk=$('bk');bk.hidden=!bk.hidden;if(!bk.hidden){$('bkt').value=bkData();bkm('')}};
+$('bkcopy').onclick=async()=>{const t=$('bkt');t.value=bkData();t.focus();t.select();let ok=false;try{ok=document.execCommand('copy')}catch(e){}
+ if(!ok){try{await navigator.clipboard.writeText(t.value);ok=true}catch(e){}}bkm(ok?'کپی شد ✓ آن را جایی نگه دار.':'متن انتخاب شد؛ با نگه‌داشتن انگشت (یا Ctrl+C) کپی کن.',!ok)};
+$('bkdl').onclick=()=>{try{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([bkData()],{type:'application/json'}));a.download='pourgold-invoices.json';document.body.appendChild(a);a.click();a.remove();bkm('اگر فایل دانلود نشد، از «کپی متن» استفاده کن.')}catch(e){bkm('دانلود در این نما ممکن نیست؛ از «کپی متن» استفاده کن.',1)}};
+$('bkrest').onclick=()=>{try{const n=mergeImport(JSON.parse($('bkt').value));bkm(pd(n)+' فاکتور بازیابی شد ✓');msg(pd(n)+' فاکتور بازیابی شد.')}catch(e){bkm(e.message==='storage'?'ذخیره‌سازی در این مرورگر ممکن نیست.':'متن پشتیبان معتبر نیست.',1)}};
+$('himp').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const rd=new FileReader();rd.onload=()=>{$('bkt').value=rd.result;$('bkrest').click();e.target.value=''};rd.readAsText(f)});
+let renT;$('hren').onclick=()=>{const b=$('hren'),t0='🔄 شماره‌گذاری مجدد از ۱';
+ if(b.dataset.arm!=='1'){b.dataset.arm='1';b.textContent='مطمئنی؟ شماره‌ها عوض می‌شوند';b.style.background='#ffd6d1';clearTimeout(renT);renT=setTimeout(()=>{b.dataset.arm='';b.textContent=t0;b.style.background=''},4000);return}
+ clearTimeout(renT);b.dataset.arm='';b.textContent=t0;b.style.background='';
+ const list=readAll().sort((x,y)=>x.no-y.no),map={};list.forEach((r,i)=>{map[r.no]=i+1;r.no=i+1});
+ if(!writeAll(list,list.length)){msg('ذخیره‌سازی ممکن نیست.',1);return}
+ if(currentId!=null)currentId=map[currentId]||null;renderHist();refreshNo();
+ msg(list.length?'شماره‌ها از ۱ تا '+pd(list.length)+' مرتب شد.':'شماره‌گذاری از ۱ شروع می‌شود.')};
+setNo();renderHist();
+$('unit').onchange=calc;
+$('add').onclick=()=>{if(rows.children.length<15)addRow();else msg('حداکثر ۱۵ ردیف مجاز است.',1)};
+$('clear').onclick=()=>{
+ document.querySelectorAll('.sheet input').forEach(i=>{if(i.id!=='date')i.value=''});
+ rows.innerHTML='';wages.innerHTML='';for(let i=0;i<2;i++)addRow();calc();
+};
+function doPrint(){let fired=false;const on=()=>{fired=true};addEventListener('beforeprint',on);
+ try{window.print()}catch(e){}
+ setTimeout(()=>{removeEventListener('beforeprint',on);$('phelp').hidden=fired},800)}
+$('print').onclick=doPrint;$('phelpx').onclick=()=>{$('phelp').hidden=true};
+try{$('date').value=new Intl.DateTimeFormat('fa-IR-u-ca-persian-nu-arabext',{year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date())}catch(e){}
+calc();
+</script>
+<script>
+(function(){const PIN='1234';let v='';const lock=document.getElementById('lock'),dd=lock.querySelector('.dots'),dots=dd.querySelectorAll('i'),msg=document.getElementById('lockmsg');
+document.body.classList.add('locked');
+const draw=()=>dots.forEach((d,i)=>d.classList.toggle('on',i<v.length));
+let T,printing=false;
+const isOpen=()=>lock.style.display==='none';
+function show(){v='';draw();msg.textContent='';lock.style.display='flex';document.body.classList.add('locked');clearTimeout(T)}
+function arm(){clearTimeout(T);if(isOpen())T=setTimeout(show,180000)}
+function unlock(){lock.style.display='none';document.body.classList.remove('locked');arm()}
+['input','click','keydown','touchstart'].forEach(ev=>document.addEventListener(ev,arm,true));
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&isOpen()&&!printing)show()});
+addEventListener('beforeprint',()=>{printing=true});addEventListener('afterprint',()=>setTimeout(()=>{printing=false},800));
+document.getElementById('lockbtn').onclick=show;
+addEventListener('pagehide',show);addEventListener('pageshow',e=>{if(e.persisted)show()});
+try{new IntersectionObserver(es=>{if(!es[0].isIntersecting&&isOpen()&&!printing)show()}).observe(document.documentElement)}catch(e){}
+let last=Date.now();setInterval(()=>{const n=Date.now();if(n-last>4000&&isOpen()&&!printing)show();last=n},1000);
+function push(d){if(v.length>=4)return;v+=d;msg.textContent='';draw();if(v.length===4)setTimeout(check,120)}
+function check(){if(v===PIN){unlock()}
+ else{msg.textContent='رمز اشتباه است';dd.classList.remove('shake');void dd.offsetWidth;dd.classList.add('shake');v='';draw()}}
+lock.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.d)push(b.dataset.d);else if(b.dataset.x){v=v.slice(0,-1);draw()}});
+document.addEventListener('keydown',e=>{if(lock.style.display==='none')return;const k=e.key,i='۰۱۲۳۴۵۶۷۸۹'.indexOf(k);
+ if(/^[0-9]$/.test(k))push(k);else if(i>=0)push(String(i));else if(k==='Backspace'){v=v.slice(0,-1);draw()}});
+})();
+</script>
+
+<script>
+/* دریافت آنلاین نرخ طلای ۱۸ عیار از TGJU + صد هزار تومان */
+(function(){
+ const status=document.getElementById('goldStatus');
+ const refresh=document.getElementById('goldRefresh');
+ const endpoints=['https://call1.tgju.org/ajax.json','https://call3.tgju.org/ajax.json'];
+ const EXTRA_TOMAN=100000;
+ const fa=n=>new Intl.NumberFormat('fa-IR').format(n);
+ function setStatus(t){status.textContent=t;status.style.color='#16803c';status.style.fontWeight='700'}
+ async function getPrice(){
+  refresh.disabled=true;refresh.textContent='در حال دریافت…';
+  let lastError;
+  for(const base of endpoints){
+   try{
+    const res=await fetch(base+'?_='+Date.now(),{cache:'no-store'});
+    if(!res.ok)throw new Error('HTTP '+res.status);
+    const data=await res.json();
+    const raw=data?.current?.geram18?.p;
+    const rial=Number(String(raw??'').replace(/[^0-9.]/g,''));
+    if(!Number.isFinite(rial)||rial<=0)throw new Error('Invalid price');
+    const officialToman=Math.round(rial/10);
+    const finalPrice=officialToman+EXTRA_TOMAN;
+    const formatted=new Intl.NumberFormat('en-US').format(finalPrice);
+    document.getElementById('gram').value=formatted;
+    document.getElementById('gram2').value=formatted;
+    if(typeof calc==='function')calc();
+    const now=new Intl.DateTimeFormat('fa-IR',{dateStyle:'short',timeStyle:'short'}).format(new Date());
+    setStatus('قیمت رسمی: '+fa(finalPrice)+' تومان | '+now);
+    try{localStorage.setItem('pg_tgju_gold18',JSON.stringify({price:finalPrice,time:Date.now()}))}catch(e){}
+    refresh.textContent='دریافت قیمت آنلاین';
+    refresh.disabled=false;
+    return;
+   }catch(e){lastError=e}
+  }
+  setStatus('قیمت رسمی: اتصال برقرار نشد');
+  console.warn('TGJU price fetch failed:',lastError);
+  refresh.textContent='تلاش مجدد';
+  refresh.disabled=false;
+ }
+ refresh.addEventListener('click',getPrice);
+ try{const old=JSON.parse(localStorage.getItem('pg_tgju_gold18')||'null');if(old?.price){setStatus('قیمت رسمی: '+fa(old.price)+' تومان')}}catch(e){}
+ getPrice();
+ setInterval(getPrice,60000);
+})();
+</script>
+
+</body>
+</html>
